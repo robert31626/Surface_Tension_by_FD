@@ -1,6 +1,6 @@
 # 2D-ADER: Finite Difference Young-Laplace Method & Experimental Droplet Analysis
 
-[![DOI](https://doi.org/10.5281/zenodo.23405107)](https://doi.org/10.5281/zenodo.23405107)
+[![DOI](https://doi.org/10.5281/zenodo.24566908)](https://doi.org/10.5281/zenodo.24566908)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/)
 
@@ -176,8 +176,8 @@ When using this code, methodology, or dataset in academic publications, please c
   year         = 2026,
   publisher    = {Zenodo},
   version      = {v1.0.0},
-  doi          = {10.5281/zenodo.23405107},
-  url          = {https://doi.org/10.5281/zenodo.23405107}
+  doi          = {10.5281/zenodo.24566908},
+  url          = {https://doi.org/10.5281/zenodo.24566908}
 }
 ```
 
