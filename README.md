@@ -38,7 +38,7 @@ $$2\bar{H}(\bar{y}) = B \bar{y} + H_0$$
 
 Where $B$ is the dimensionless Bond number / shape factor:
 
-$$B = \frac{\Delta \rho g d^2}{\Gamma} \implies \Gamma = \frac{\Delta \rho g d^2}{B}$$
+$$B = \frac{\Delta \rho g d^2}{\Gamma} \implies \gamma = \frac{\Delta \rho g d^2}{B}$$
 
 Linear regression over the hydrostatic profile yields $B$ and directly determines $\Gamma$.
 
