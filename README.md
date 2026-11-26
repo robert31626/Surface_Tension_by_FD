@@ -4,7 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/)
 
-This repository contains the complete computational implementation, experimental datasets, and numerical benchmarks for the **Finite Difference (FD) Young-Laplace method**. The framework enables high-precision determination of interfacial/surface tension ($\Gamma$) and geometrical properties of axisymmetric pendant and sessile drops without requiring non-linear shooting algorithms or ODE integration from the apex.
+This repository contains the complete computational implementation, experimental datasets, and numerical benchmarks for the **Finite Difference (FD) Young-Laplace method**. The framework enables high-precision determination of interfacial/surface tension ($\gamma$) and geometrical properties of axisymmetric pendant and sessile drops without requiring non-linear shooting algorithms or ODE integration from the apex.
 
 ---
 
@@ -14,14 +14,14 @@ Standard Axisymmetric Drop Shape Analysis (ADSA) algorithms iteratively integrat
 
 For an axisymmetric liquid droplet in gravitational and mechanical equilibrium, the hydrostatic pressure jump across the interface is described by the Young-Laplace equation:
 
-$$\Delta P(y) = \Delta P_0 + \Delta \rho g y = 2 H(y) \Gamma$$
+$$\Delta P(y) = \Delta P_0 + \Delta \rho g y = 2 H(y) \gamma$$
 
 Where:
 * $\Delta \rho = \rho_{\text{liquid}} - \rho_{\text{fluid}}$ is the density difference between phases ($\text{kg/m}^3$).
 * $g$ is the local acceleration due to gravity ($\text{m/s}^2$).
 * $y$ is the vertical elevation coordinate oriented along the gravity vector ($\text{m}$).
 * $2H(y) = \kappa_1 + \kappa_2$ is the total interface mean curvature ($\text{m}^{-1}$).
-* $\Gamma$ is the interfacial/surface tension ($\text{N/m}$).
+* $\gamma$ is the interfacial/surface tension ($\text{N/m}$).
 
 ### Dimensionless Formulation
 Spatial coordinates are non-dimensionalized by the equatorial radius $d = r_{\text{pixels}} \cdot \text{pixel-size}$:
@@ -38,9 +38,9 @@ $$2\bar{H}(\bar{y}) = B \bar{y} + H_0$$
 
 Where $B$ is the dimensionless Bond number / shape factor:
 
-$$B = \frac{\Delta \rho g d^2}{\Gamma} \implies \gamma = \frac{\Delta \rho g d^2}{B}$$
+$$B = \frac{\Delta \rho g d^2}{\gamma} \implies \gamma = \frac{\Delta \rho g d^2}{B}$$
 
-Linear regression over the hydrostatic profile yields $B$ and directly determines $\Gamma$.
+Linear regression over the hydrostatic profile yields $B$ and directly determines $\gamma$.
 
 ---
 
@@ -132,7 +132,7 @@ The pipeline outputs structured datasets and graphical diagnostics into `OUTPUT_
 2. `FD_Standard_Deviations[_Video_{id}].xlsx`: Linear regression standard errors across evaluated strides.
 3. `FD_B_Branches[_Video_{id}].xlsx`: Branch-resolved $B$ values for left and right drop profiles.
 4. `FD_Gamma_vs_PBLs[_Video_{id}].xlsx` & `FD_B_vs_PBLs[_Video_{id}].xlsx`: Global stability matrices as a function of stride length.
-5. Diagnostic Plots (`.png`): Stride sensitivity plots ($B$, $\Gamma$, standard error vs. PBL) and curvature vs. elevation fit curves.
+5. Diagnostic Plots (`.png`): Stride sensitivity plots ($B$, $\gamma$, standard error vs. PBL) and curvature vs. elevation fit curves.
 
 ---
 
@@ -159,7 +159,7 @@ The file `Experimental profiles ans results/Resume_results.xlsx` compiles experi
 | `Volume` | $\mu\text{L}$ | Axisymmetric volume calculated via numerical disk slicing integration |
 | `Area` | $\text{mm}^2$ | Projected 2D profile area computed via trapezoidal integration |
 | `Neumann_number` | — | Dimensionless Neumann number |
-| `Worthington_number`| — | Dimensionless Worthington number ($Wo = \frac{\Delta \rho g V}{\pi \Gamma_{\text{ref}} d_{\text{needle}}}$) |
+| `Worthington_number`| — | Dimensionless Worthington number ($Wo = \frac{\Delta \rho g V}{\pi \gamma_{\text{ref}} d_{\text{needle}}}$) |
 | `Fitted_points` | integer | Mean number of spatial points utilized in the linear regression |
 
 ---
