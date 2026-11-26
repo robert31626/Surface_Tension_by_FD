@@ -24,7 +24,7 @@ Where:
 * $\Gamma$ is the interfacial/surface tension ($\text{N/m}$).
 
 ### Dimensionless Formulation
-Spatial coordinates are non-dimensionalized by the equatorial radius $d = r_{\text{pixels}} \cdot \text{pixel\_size}$:
+Spatial coordinates are non-dimensionalized by the equatorial radius $d = r_{\text{pixels}} \cdot \text{pixel-size}$:
 
 $$\bar{x} = \frac{x}{d}, \quad \bar{y} = \frac{y}{d}$$
 
