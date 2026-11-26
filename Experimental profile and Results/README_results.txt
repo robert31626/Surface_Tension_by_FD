@@ -14,9 +14,9 @@ S_B_FD: Standard deviation of the Bond number from the FD method
 Gamma_FD (N/m): Mean surface tension of the droplet in N/m from the FD method
 S_Gama_FD (N/m): Standard deviation of the surface tension in N/m from the FD method
 Shape_parameter: Mean shape parameter of the droplet
+Neumann_Number: Mean Neumann number of the droplet
 Contact_Angle (deg): Mean contact angle of the droplet in degrees
 Volume (uL): Mean volume of the droplet in microliters
 Area (mm^2): Mean area of the droplet in square millimeters
-Neumann_number: Mean Neumann number of the droplet
 Worthington_number: Mean Worthington number of the droplet
 Fitted_points: Mean number of points used for the fit (integer value)
